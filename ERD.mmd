@@ -1,0 +1,33 @@
+erDiagram
+    %% Conceptual model: attribute types describe values, not database-specific types.
+    %% Songs and performance sessions may initially be empty.
+    %% Section positions are unique within a song.
+    %% Setlist entry positions are unique within a performance session.
+    %% Repeated sections are separate records; repeated setlist entries share a song.
+    %% Nashville notation is display-only text.
+    %% Deleting a song deletes its sections and all referencing setlist entries.
+    %% Deleting a performance session deletes its entries, but preserves songs.
+    %% Deleting an entry preserves its song; deleting a section affects only that section.
+
+    SONG ||--o{ SECTION : contains
+    PERFORMANCE_SESSION ||--o{ SETLIST_ENTRY : contains
+    SONG ||--o{ SETLIST_ENTRY : "is referenced by"
+
+    SONG {
+        string name
+    }
+
+    SECTION {
+        string name
+        string nashvilleNotation
+        string notes
+        int position
+    }
+
+    PERFORMANCE_SESSION {
+        string name
+    }
+
+    SETLIST_ENTRY {
+        int position
+    }
