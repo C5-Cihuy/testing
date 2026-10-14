@@ -11,6 +11,7 @@
 		1203807C91C2DAE1EC868EC5 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450748239F4EB12B623CCE8C /* DataBase.swift */; };
 		1C6045C2B43B2B49D38C5271 /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1FBC8D79EA9C3099375 /* PersistenceStack.swift */; };
 		20C1E2877C46D16A63189110 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE778C9708ED920EB26682 /* AppRoute.swift */; };
+		425C08FE3A487403F8BE89BF /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4D266418C7E552AEF987 /* AppColors.swift */; };
 		4E4832F19EAFCF42CBE92412 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2051AA98855CB47C650FE2 /* SongModel.swift */; };
 		4F2C2B2A759EED8B526A36BD /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A08BFD6055590BBBEB4BB7 /* MyApp.swift */; };
 		599D60AA6CA5D26445D7CC47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0963EF69BA7027C55F905209 /* Assets.xcassets */; };
@@ -28,9 +29,9 @@
 		C0B63D23BCD204831A2A0DDE /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCBAEC2F2AF6195701FB30A /* AppAlert.swift */; };
 		DD6DE7D84A2849833A463AF6 /* FullScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263006EA7A1678A54ABD8FF3 /* FullScreenRoute.swift */; };
 		DF0055A4EAD7710C625BBC21 /* SheetRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70C06B7432D4FA9F2C9B78 /* SheetRoute.swift */; };
-		E08263FAE2FF014778480B54 /* PeerToPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 05FE5A02233C9B6C45FB7760 /* PeerToPeerMessaging */; };
+		E08263FAE2FF014778480B54 /* MultiPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C3FB2BD3FF199DD923FAB9F3 /* MultiPeerMessaging */; };
 		E183962D11A6AB208F192553 /* GenericRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D0CECBA038A449FC890F5 /* GenericRepository.swift */; };
-		F36556B9C48A6526373DE40A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D99C069FA332BC0BD81A692 /* AppColors.swift */; };
+		E534DB431BF4F4D104BAEBEF /* PeerToPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 05FE5A02233C9B6C45FB7760 /* PeerToPeerMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,6 @@
 		278089D618E401A68965B782 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		2ED61A9080E2086ECD2F3A0E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2FDCC1FBC8D79EA9C3099375 /* PersistenceStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStack.swift; sourceTree = "<group>"; };
-		3D99C069FA332BC0BD81A692 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		450748239F4EB12B623CCE8C /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		4BCBAEC2F2AF6195701FB30A /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		68E5472AC667FF3102A67213 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
@@ -51,9 +51,11 @@
 		8D70C06B7432D4FA9F2C9B78 /* SheetRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRoute.swift; sourceTree = "<group>"; };
 		A48A911DAF0C216DD37B5046 /* Testing.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AE778C9708ED920EB26682 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		ADEED25CAC6F1C1B589A239D /* MultiPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MultiPeerMessaging; path = Packages/MultiPeerMessaging; sourceTree = SOURCE_ROOT; };
 		B492BD6E6AA2BFE47604A51C /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
 		B862A4C9CAFF9920D8D589E5 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		C372DF2A3F217582475E1705 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
+		C4CD4D266418C7E552AEF987 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		CBC5BAC55E0E6D426676DBC2 /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
 		D08D0CECBA038A449FC890F5 /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
 		D7A08BFD6055590BBBEB4BB7 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
@@ -66,7 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08263FAE2FF014778480B54 /* PeerToPeerMessaging in Frameworks */,
+				E08263FAE2FF014778480B54 /* MultiPeerMessaging in Frameworks */,
+				E534DB431BF4F4D104BAEBEF /* PeerToPeerMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 		3258608796B47E3FA4FABFFA /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				ADEED25CAC6F1C1B589A239D /* MultiPeerMessaging */,
 				C372DF2A3F217582475E1705 /* PeerToPeerMessaging */,
 			);
 			path = Packages;
@@ -136,7 +140,7 @@
 		66D4C3533FA45B146021F4A1 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				3D99C069FA332BC0BD81A692 /* AppColors.swift */,
+				C4CD4D266418C7E552AEF987 /* AppColors.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -217,6 +221,7 @@
 			);
 			name = Testing;
 			packageProductDependencies = (
+				C3FB2BD3FF199DD923FAB9F3 /* MultiPeerMessaging */,
 				05FE5A02233C9B6C45FB7760 /* PeerToPeerMessaging */,
 			);
 			productName = Testing;
@@ -248,6 +253,7 @@
 			mainGroup = 23E89C73F108A2356F2DA2A3;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				7D07938F4C8A1511783692A5 /* XCLocalSwiftPackageReference "Packages/MultiPeerMessaging" */,
 				84957CCAA1C743B962EB3335 /* XCLocalSwiftPackageReference "Packages/PeerToPeerMessaging" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -278,9 +284,9 @@
 			files = (
 				8F0E3E6DDDFD7F4A9DD2610A /* ActiveRecord.swift in Sources */,
 				C0B63D23BCD204831A2A0DDE /* AppAlert.swift in Sources */,
+				425C08FE3A487403F8BE89BF /* AppColors.swift in Sources */,
 				20C1E2877C46D16A63189110 /* AppRoute.swift in Sources */,
 				07906915DD0FBAB6831629FB /* AppRouter.swift in Sources */,
-				F36556B9C48A6526373DE40A /* AppColors.swift in Sources */,
 				1203807C91C2DAE1EC868EC5 /* DataBase.swift in Sources */,
 				9984A786272E92C4B28A4EF6 /* DataLayerError.swift in Sources */,
 				98196CC328587CE2C72446CF /* Either.swift in Sources */,
@@ -527,6 +533,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		7D07938F4C8A1511783692A5 /* XCLocalSwiftPackageReference "Packages/MultiPeerMessaging" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MultiPeerMessaging;
+		};
 		84957CCAA1C743B962EB3335 /* XCLocalSwiftPackageReference "Packages/PeerToPeerMessaging" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/PeerToPeerMessaging;
@@ -537,6 +547,10 @@
 		05FE5A02233C9B6C45FB7760 /* PeerToPeerMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PeerToPeerMessaging;
+		};
+		C3FB2BD3FF199DD923FAB9F3 /* MultiPeerMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultiPeerMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
