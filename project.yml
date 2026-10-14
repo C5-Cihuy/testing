@@ -1,0 +1,84 @@
+name: Testing
+
+configs:
+  Debug: debug
+  Release: release
+
+settings:
+  base:
+    PROJECT_UNIQUE_VALUE: NO8PE8RP
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: YES
+    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: NO
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+packages:
+  PeerToPeerMessaging:
+    path: Packages/PeerToPeerMessaging
+
+targets:
+  Testing:
+    type: application
+    platform: iOS
+    deploymentTarget: "26.0"
+
+    sources:
+      - path: Testing
+      - path: SharedContent
+        # Deferred networking work is not part of the app scaffold yet.
+        excludes:
+          - Models/Extensions/SessionModel+Extension.swift
+          - Utilities/NetworkCommand.swift
+          - ViewModels/NetworkViewModel.swift
+          - PreviewEnvironments.swift
+          - Views/ClientView.swift
+          - Views/ServerView.swift
+
+    dependencies:
+      - package: PeerToPeerMessaging
+        product: PeerToPeerMessaging
+
+    settings:
+      base:
+        PRODUCT_NAME: "$(TARGET_NAME)"
+        PRODUCT_BUNDLE_IDENTIFIER: "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: 1
+
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 48PQRZPVR4
+
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MACCATALYST: NO
+        ENABLE_PREVIEWS: YES
+        # No AppIcon set exists in the current asset catalog.
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+
+        SWIFT_VERSION: "5.0"
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleDefault
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+
+schemes:
+  Testing:
+    build:
+      targets:
+        Testing: all
+    run:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

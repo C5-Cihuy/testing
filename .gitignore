@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*.un~
+.vscode
+.DS_Store
+
+.issues/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Swift Package Manager generated files
+.build/

@@ -64,7 +64,12 @@ git push -u origin <child-branch>
 - Open a PR for every merge with `github_create_pull_request`:
   - base = parent branch (`story`, `epic`, or `main`), head = child branch.
   - Title: `<type>: <issue summary>` using the commit convention already used in the repo (e.g. `feat: ...`, `chore: ...`).
-  - Body: brief summary, link to the issue it implements, and the verification performed.
+  - Body: brief summary, a closing reference to the issue the child branch implements, and the verification performed. Use GitHub's closing keyword syntax, for example:
+    ```markdown
+    Closes #123
+    ```
+    Do not use a plain issue link or a non-closing reference (`Refs #123`), because those do not automatically close the issue when the PR is merged.
+  - Resolve the GitHub issue number from the issue title/record before creating the PR. The hierarchical number used in the branch name (for example, `1-1-1`) is not the GitHub issue number.
 - Wait for checks/review to pass, then merge with `github_merge_pull_request` using `merge_method: merge` (merge commits preserve granular task history).
 - **Merge authority:** merge task -> story and story -> epic PRs autonomously once checks pass. Always ask the user for confirmation before merging an epic -> `main` PR.
 
@@ -79,5 +84,6 @@ After a PR is merged:
 ## Integration with Issue Management
 
 - Branch names come from issues created per the `issue-management` skill (`.opencode/skills/issue-management/SKILL.md`). One branch per issue, at the level matching its label (`epic`, `story`, `task`).
-- Reference the issue number in the PR body (e.g. `Closes #5`) so GitHub links the hierarchy back to the branch.
+- Each child branch PR must include `Closes #<issue-number>` for the issue represented by that branch. GitHub will automatically close that issue when the PR merges into its parent branch.
+- Keep the closing reference in the PR body, not only in a commit message or branch name; GitHub's automatic issue closure is driven by the merged PR description (and supported closing keywords).
 - When an issue is closed, its branch should already be merged; if not, flag it instead of closing silently.

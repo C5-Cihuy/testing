@@ -1,0 +1,38 @@
+erDiagram
+    %% Model names and stored attributes match SharedContent/Models.
+    %% Relationship properties are represented by edges, not scalar attributes.
+    %% Songs and sessions may initially be empty.
+    %% Sections require a song; setlist entries require both a session and a song.
+    %% Order values are not constrained to be unique by the models.
+    %% Repeated sections are separate records; repeated setlist entries share a song.
+    %% nashvile and note are stored strings; their spelling matches SectionModel.
+    %% Deleting a song deletes its sections and all referencing setlist entries.
+    %% Deleting a performance session deletes its entries, but preserves songs.
+    %% Deleting an entry preserves its song; deleting a section affects only that section.
+
+    SongModel ||--o{ SectionModel : sections
+    SessionModel ||--o{ SetlistEntryModel : setlistEntries
+    SongModel ||--o{ SetlistEntryModel : setlistEntries
+
+    SongModel {
+        UUID id
+        String name
+    }
+
+    SectionModel {
+        UUID id
+        String name
+        Int order
+        String nashvile
+        String note
+    }
+
+    SessionModel {
+        UUID id
+        String name
+    }
+
+    SetlistEntryModel {
+        UUID id
+        Int order
+    }

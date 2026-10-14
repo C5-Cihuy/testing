@@ -14,4 +14,6 @@ set -a
 source "$ENV_FILE"
 set +a
 
-exec opencode . "$@"
+# A shared background service does not inherit this script's environment.
+# Use a private server so MCP configuration can resolve the exported variables.
+exec opencode --standalone "$ROOT_DIR" "$@"
