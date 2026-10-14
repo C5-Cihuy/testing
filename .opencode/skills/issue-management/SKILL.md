@@ -105,7 +105,12 @@ Every Task must include the following mandatory sections from `templates/task.md
 ## Structure & Rules
 
 - GitHub Issues are the single source of truth; create and update them only via GitHub MCP tools.
-- `.issues/open/` holds files mirrored by `gh-issue-sync pull`, named `[id]-[issue name in slug].md` by the tool (e.g., an issue titled "Epic 3: Initialize project" with ID #3 becomes `3-epic-3-initialize-project.md`). Never hand-edit these files.
+- Issue titles must use the hierarchical naming format:
+  - Epic: `N. Epic: <name>` (for example, `1. Epic: Make it beautiful`)
+  - Story: `N.M. Story: <name>` (for example, `1.1. Story: Change Color`)
+  - Task: `N.M.K. Task: <name>` (for example, `1.1.1. Task: Change to Red`)
+- The hierarchy numbers are sequential within their parent scope: Epics use `N`, Stories use `N.M` where `M` is scoped to the Epic, and Tasks use `N.M.K` where `K` is scoped to the Story.
+- `.issues/open/` holds files mirrored by `gh-issue-sync pull`, named `{Issue ID}-{Epic Number}-{Story Number}-{Task Number}-slug.md` by the tool. Omit hierarchy segments that do not apply. For example, issue #12 titled `1. Epic: Make it beautiful` becomes `12-1-make-it-beautiful.md`; issue #13 titled `1.1. Story: Change Color` becomes `13-1-1-change-color.md`; and issue #14 titled `1.1.1. Task: Change to Red` becomes `14-1-1-1-change-to-red.md`. Never hand-edit these files.
 - Reference rule:
   - Every Story must be linked as a sub-issue of its parent Epic, and reference it in the file body.
   - Every Task must be linked as a sub-issue of its parent Story, and reference it in the file body.
