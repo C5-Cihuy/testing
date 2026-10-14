@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07906915DD0FBAB6831629FB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B862A4C9CAFF9920D8D589E5 /* AppRouter.swift */; };
+		0CA02264F937C728EFCCD130 /* MultipeerTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6612BF66BC442F67C2D2EA7 /* MultipeerTestViewModel.swift */; };
 		1203807C91C2DAE1EC868EC5 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450748239F4EB12B623CCE8C /* DataBase.swift */; };
 		1C6045C2B43B2B49D38C5271 /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1FBC8D79EA9C3099375 /* PersistenceStack.swift */; };
 		20C1E2877C46D16A63189110 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE778C9708ED920EB26682 /* AppRoute.swift */; };
@@ -18,6 +19,7 @@
 		6193151D1D2CCE55909091AD /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5BAC55E0E6D426676DBC2 /* JSONCodable.swift */; };
 		665810F5CD19EBD6853B014C /* JSONArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278089D618E401A68965B782 /* JSONArray.swift */; };
 		74BD1A32D638AEDA8CDE9041 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED61A9080E2086ECD2F3A0E /* HomeView.swift */; };
+		75400821415DE1A0BE7FC4B3 /* MultipeerTestTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF269F7FA2CC1B167DFE2AD /* MultipeerTestTypes.swift */; };
 		7C607C5642260FB67AC98E50 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E5472AC667FF3102A67213 /* SectionModel.swift */; };
 		8F0E3E6DDDFD7F4A9DD2610A /* ActiveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104D929D146E4BC1F1F0055 /* ActiveRecord.swift */; };
 		92A68A5B2DEC1B2CEB7C52BD /* RootRouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B492BD6E6AA2BFE47604A51C /* RootRouterView.swift */; };
@@ -31,35 +33,44 @@
 		DF0055A4EAD7710C625BBC21 /* SheetRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D70C06B7432D4FA9F2C9B78 /* SheetRoute.swift */; };
 		E08263FAE2FF014778480B54 /* MultiPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C3FB2BD3FF199DD923FAB9F3 /* MultiPeerMessaging */; };
 		E183962D11A6AB208F192553 /* GenericRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D0CECBA038A449FC890F5 /* GenericRepository.swift */; };
+		E46640F9EDDE8E366F2770AD /* MultipeerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209ACE785254E71379D78BE8 /* MultipeerTestView.swift */; };
 		E534DB431BF4F4D104BAEBEF /* PeerToPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 05FE5A02233C9B6C45FB7760 /* PeerToPeerMessaging */; };
+		EC07307F56DC4E68FBE573C2 /* MultipeerTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80220390325D5831909439 /* MultipeerTestService.swift */; };
+		FF254E0784CA843EA549F7F6 /* MultipeerTestMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4E8E38BE6E11E106A70AC /* MultipeerTestMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0963EF69BA7027C55F905209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E2051AA98855CB47C650FE2 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		209ACE785254E71379D78BE8 /* MultipeerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerTestView.swift; sourceTree = "<group>"; };
 		263006EA7A1678A54ABD8FF3 /* FullScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenRoute.swift; sourceTree = "<group>"; };
 		278089D618E401A68965B782 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		2ED61A9080E2086ECD2F3A0E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2FDCC1FBC8D79EA9C3099375 /* PersistenceStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStack.swift; sourceTree = "<group>"; };
+		34D4E8E38BE6E11E106A70AC /* MultipeerTestMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerTestMessage.swift; sourceTree = "<group>"; };
 		450748239F4EB12B623CCE8C /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		4BCBAEC2F2AF6195701FB30A /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		68E5472AC667FF3102A67213 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		6F80220390325D5831909439 /* MultipeerTestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerTestService.swift; sourceTree = "<group>"; };
 		7136817BE0AA359B8508BE9A /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		7555ADBAF2993C432B30A747 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		8AC73CB5E295F5D29B6747FA /* DataLayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerError.swift; sourceTree = "<group>"; };
 		8C793EDE95F462431657A663 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8D70C06B7432D4FA9F2C9B78 /* SheetRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRoute.swift; sourceTree = "<group>"; };
+		8DEEC14512AAC34A5B583876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A48A911DAF0C216DD37B5046 /* Testing.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AE778C9708ED920EB26682 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		ADEED25CAC6F1C1B589A239D /* MultiPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MultiPeerMessaging; path = Packages/MultiPeerMessaging; sourceTree = SOURCE_ROOT; };
 		B492BD6E6AA2BFE47604A51C /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
 		B862A4C9CAFF9920D8D589E5 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		BCF269F7FA2CC1B167DFE2AD /* MultipeerTestTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerTestTypes.swift; sourceTree = "<group>"; };
 		C372DF2A3F217582475E1705 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
 		C4CD4D266418C7E552AEF987 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		CBC5BAC55E0E6D426676DBC2 /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
 		D08D0CECBA038A449FC890F5 /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
 		D7A08BFD6055590BBBEB4BB7 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		E104D929D146E4BC1F1F0055 /* ActiveRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRecord.swift; sourceTree = "<group>"; };
+		E6612BF66BC442F67C2D2EA7 /* MultipeerTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerTestViewModel.swift; sourceTree = "<group>"; };
 		E6D4C91520D7DC8183D3B7EF /* SetlistEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistEntryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +156,26 @@
 			path = Extenstions;
 			sourceTree = "<group>";
 		};
+		718D0CB47A33EB34B63EF308 /* MultipeerTest */ = {
+			isa = PBXGroup;
+			children = (
+				34D4E8E38BE6E11E106A70AC /* MultipeerTestMessage.swift */,
+				6F80220390325D5831909439 /* MultipeerTestService.swift */,
+				BCF269F7FA2CC1B167DFE2AD /* MultipeerTestTypes.swift */,
+				209ACE785254E71379D78BE8 /* MultipeerTestView.swift */,
+				E6612BF66BC442F67C2D2EA7 /* MultipeerTestViewModel.swift */,
+			);
+			path = MultipeerTest;
+			sourceTree = "<group>";
+		};
+		A0670AC8FE1B3E43D455A6BE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				718D0CB47A33EB34B63EF308 /* MultipeerTest */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		A58E21623BDFF987F10D9306 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +228,9 @@
 		F51444E4CF7AB4DD88378CA5 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				8DEEC14512AAC34A5B583876 /* Info.plist */,
 				EF3F6C344BF47246551FAC9D /* App */,
+				A0670AC8FE1B3E43D455A6BE /* Features */,
 				ED8A9EA6F3696A4B6BB10F4B /* Routing */,
 				20C061ED51FAFEBBF844A162 /* Views */,
 			);
@@ -295,6 +328,11 @@
 				74BD1A32D638AEDA8CDE9041 /* HomeView.swift in Sources */,
 				665810F5CD19EBD6853B014C /* JSONArray.swift in Sources */,
 				6193151D1D2CCE55909091AD /* JSONCodable.swift in Sources */,
+				FF254E0784CA843EA549F7F6 /* MultipeerTestMessage.swift in Sources */,
+				EC07307F56DC4E68FBE573C2 /* MultipeerTestService.swift in Sources */,
+				75400821415DE1A0BE7FC4B3 /* MultipeerTestTypes.swift in Sources */,
+				E46640F9EDDE8E366F2770AD /* MultipeerTestView.swift in Sources */,
+				0CA02264F937C728EFCCD130 /* MultipeerTestViewModel.swift in Sources */,
 				4F2C2B2A759EED8B526A36BD /* MyApp.swift in Sources */,
 				1C6045C2B43B2B49D38C5271 /* PersistenceStack.swift in Sources */,
 				9B6D7AF96DD90834248EB8EA /* Repository.swift in Sources */,
@@ -387,6 +425,8 @@
 				DEVELOPMENT_TEAM = 48PQRZPVR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Testing/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to the test server and clients on your local network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,6 +523,8 @@
 				DEVELOPMENT_TEAM = 48PQRZPVR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Testing/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to the test server and clients on your local network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
