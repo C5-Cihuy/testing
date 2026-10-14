@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension Color {
+enum AppColors {
     static let primary = Color("PrimaryColor")
     static let primaryForeground = Color("PrimaryForegroundColor")
 
