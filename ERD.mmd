@@ -1,33 +1,38 @@
 erDiagram
-    %% Conceptual model: attribute types describe values, not database-specific types.
-    %% Songs and performance sessions may initially be empty.
-    %% Section positions are unique within a song.
-    %% Setlist entry positions are unique within a performance session.
+    %% Model names and stored attributes match SharedContent/Models.
+    %% Relationship properties are represented by edges, not scalar attributes.
+    %% Songs and sessions may initially be empty.
+    %% Sections require a song; setlist entries require both a session and a song.
+    %% Order values are not constrained to be unique by the models.
     %% Repeated sections are separate records; repeated setlist entries share a song.
-    %% Nashville notation is display-only text.
+    %% nashvile and note are stored strings; their spelling matches SectionModel.
     %% Deleting a song deletes its sections and all referencing setlist entries.
     %% Deleting a performance session deletes its entries, but preserves songs.
     %% Deleting an entry preserves its song; deleting a section affects only that section.
 
-    SONG ||--o{ SECTION : contains
-    PERFORMANCE_SESSION ||--o{ SETLIST_ENTRY : contains
-    SONG ||--o{ SETLIST_ENTRY : "is referenced by"
+    SongModel ||--o{ SectionModel : sections
+    SessionModel ||--o{ SetlistEntryModel : setlistEntries
+    SongModel ||--o{ SetlistEntryModel : setlistEntries
 
-    SONG {
-        string name
+    SongModel {
+        UUID id
+        String name
     }
 
-    SECTION {
-        string name
-        string nashvilleNotation
-        string notes
-        int position
+    SectionModel {
+        UUID id
+        String name
+        Int order
+        String nashvile
+        String note
     }
 
-    PERFORMANCE_SESSION {
-        string name
+    SessionModel {
+        UUID id
+        String name
     }
 
-    SETLIST_ENTRY {
-        int position
+    SetlistEntryModel {
+        UUID id
+        Int order
     }
