@@ -1,13 +1,13 @@
 # Repository guidance
 
 ## Xcode setup and verification
-- `project.yml` is the main entry point and source of truth for Xcode-related project setup (targets, source membership, dependencies, settings, and schemes). Change it rather than only editing `Testing.xcodeproj`; regenerate with `xcodegen generate --spec project.yml`.
+- `project.yml` is the main entry point and source of truth for Xcode-related project setup (targets, source membership, dependencies, settings, and schemes). Change it rather than only editing `InSync.xcodeproj`; regenerate with `xcodegen generate --spec project.yml`.
 - Use Xcode 26 / Swift tools 6.2 or newer: the app targets iOS 26 and the local package requires Swift tools 6.2. The app uses Swift 5 language mode with default `MainActor` isolation and approachable concurrency; the package has its own settings.
-- Simulator build from the repository root: `xcodebuild -project Testing.xcodeproj -scheme Testing -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData CODE_SIGNING_ALLOWED=NO build`.
-- No test targets are configured: the `Testing` scheme has no testables and the local package has no `.testTarget`. Add the appropriate target before attempting test or single-test commands.
+- Simulator build from the repository root: `xcodebuild -project InSync.xcodeproj -scheme InSync -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData CODE_SIGNING_ALLOWED=NO build`.
+- No test targets are configured: the `InSync` scheme has no testables and the local package has no `.testTarget`. Add the appropriate target before attempting test or single-test commands.
 
 ## App boundaries and conventions
-- App startup is `Testing/App/MyApp.swift` → `RootRouterView` → `HomeView`. `RootRouterView` owns and injects `AppRouter`; extend the route enums and centralized destinations for navigation and modal flows.
+- App startup is `InSync/App/MyApp.swift` → `RootRouterView` → `HomeView`. `RootRouterView` owns and injects `AppRouter`; extend the route enums and centralized destinations for navigation and modal flows.
 - `SharedContent` is compiled directly into the app, not a separate package. `project.yml` deliberately excludes the deferred networking extension, command, view model, previews, and client/server views; do not assume those files are active or remove the exclusions incidentally.
 - Use `AppColors` as the color system, defined in `SharedContent/Extenstions/AppColors.swift` (the directory spelling is intentional here). Semantic colors and foreground pairs map to assets in `SharedContent/Resources/Assets.xcassets`; avoid ad hoc UI colors.
 - Use the repository's Swift pattern skills to keep code maintainable: `swift-test-pattern`, `swiftui-mvvm-pattern`, `swiftui-components-pattern`, and `swiftui-router-pattern`. Load the relevant skill under `.agents/skills/` before writing tests, features, reusable components, or navigation; do not duplicate their detailed guidance here.

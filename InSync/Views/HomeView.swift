@@ -1,6 +1,6 @@
 //
 //  HomeView.swift
-//  Testing
+//  InSync
 //
 //  Created by Saujana Shafi on 14/10/26.
 //
