@@ -83,7 +83,7 @@ After a PR is merged:
 
 ## Integration with Issue Management
 
-- Branch names come from issues created per the `issue-management` skill (`.opencode/skills/issue-management/SKILL.md`). One branch per issue, at the level matching its label (`epic`, `story`, `task`).
+- Branch names come from issues created per the `issue-management` skill ([SKILL.md](../issue-management/SKILL.md)). One branch per issue, at the level matching its label (`epic`, `story`, `task`).
 - Each child branch PR must include `Closes #<issue-number>` for the issue represented by that branch. GitHub will automatically close that issue when the PR merges into its parent branch.
 - Keep the closing reference in the PR body, not only in a commit message or branch name; GitHub's automatic issue closure is driven by the merged PR description (and supported closing keywords).
 - When an issue is closed, its branch should already be merged; if not, flag it instead of closing silently.
