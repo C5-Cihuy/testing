@@ -9,7 +9,7 @@ The Swift sources and package manifest are unchanged. Repository-local agent
 settings were omitted. See `LICENSE.txt` for the upstream sample license.
 
 Requires Swift tools 6.2 and declares iOS 26 / visionOS 26 support. The package
-depends on Apple's `swift-certificates` package and is linked to the `Testing`
+depends on Apple's `swift-certificates` package and is linked to the `InSync`
 app target as a local package.
 
 Import it with `import PeerToPeerMessaging`. Linking the package does not start

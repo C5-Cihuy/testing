@@ -1,4 +1,4 @@
-name: Testing
+name: InSync
 
 configs:
   Debug: debug
@@ -17,13 +17,13 @@ packages:
     path: Packages/PeerToPeerMessaging
 
 targets:
-  Testing:
+  InSync:
     type: application
     platform: iOS
     deploymentTarget: "26.0"
 
     sources:
-      - path: Testing
+      - path: InSync
       - path: SharedContent
         # Deferred networking work is not part of the app scaffold yet.
         excludes:
@@ -70,10 +70,10 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
 
 schemes:
-  Testing:
+  InSync:
     build:
       targets:
-        Testing: all
+        InSync: all
     run:
       config: Debug
     profile:

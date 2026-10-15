@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF78EB3488FE06A9B21012F4"
-               BuildableName = "Testing.app"
-               BlueprintName = "Testing"
-               ReferencedContainer = "container:Testing.xcodeproj">
+               BlueprintIdentifier = "229115BD7566B1153D86561A"
+               BuildableName = "InSync.app"
+               BlueprintName = "InSync"
+               ReferencedContainer = "container:InSync.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EF78EB3488FE06A9B21012F4"
-            BuildableName = "Testing.app"
-            BlueprintName = "Testing"
-            ReferencedContainer = "container:Testing.xcodeproj">
+            BlueprintIdentifier = "229115BD7566B1153D86561A"
+            BuildableName = "InSync.app"
+            BlueprintName = "InSync"
+            ReferencedContainer = "container:InSync.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EF78EB3488FE06A9B21012F4"
-            BuildableName = "Testing.app"
-            BlueprintName = "Testing"
-            ReferencedContainer = "container:Testing.xcodeproj">
+            BlueprintIdentifier = "229115BD7566B1153D86561A"
+            BuildableName = "InSync.app"
+            BlueprintName = "InSync"
+            ReferencedContainer = "container:InSync.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EF78EB3488FE06A9B21012F4"
-            BuildableName = "Testing.app"
-            BlueprintName = "Testing"
-            ReferencedContainer = "container:Testing.xcodeproj">
+            BlueprintIdentifier = "229115BD7566B1153D86561A"
+            BuildableName = "InSync.app"
+            BlueprintName = "InSync"
+            ReferencedContainer = "container:InSync.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
