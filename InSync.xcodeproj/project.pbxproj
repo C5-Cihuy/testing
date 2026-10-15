@@ -13,6 +13,7 @@
 		583138D11BF5C6449C0F1641 /* RootRouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CADCC952D3BA52BEC77016 /* RootRouterView.swift */; };
 		5CDBA48CBA321E3AAFC22843 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17BB9041CD350063DE87B4 /* DataBase.swift */; };
 		5D7F38D08381CD16E3CA0046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8D1EE6A77AD0C3CB0ECE79 /* Assets.xcassets */; };
+		69C460327F07BB501C6776F3 /* PeerToPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B629B6D67C271FA6B5F5FF1 /* PeerToPeerMessaging */; };
 		6ABA043BD9A65B07C637C423 /* GenericRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2978EEACFB24360F0E7E5B /* GenericRepository.swift */; };
 		6B618AF7A571BE6B70D46726 /* FullScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB6B5E3969357C79280A31B /* FullScreenRoute.swift */; };
 		760B6719812047D593E1EC2E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF28172E2286268281CD8D5 /* HomeView.swift */; };
@@ -30,7 +31,7 @@
 		D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A090339DB4EE4148EB9B8 /* Repository.swift */; };
 		E7272B73D2FF17F71A25E9A8 /* ActiveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BADE0AACC14EF2DDD03FD /* ActiveRecord.swift */; };
 		ECD267851EC7066951659741 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437EAA560527332FFB77300 /* SectionModel.swift */; };
-		EFF62840AF6A4F909F277847 /* PeerToPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B629B6D67C271FA6B5F5FF1 /* PeerToPeerMessaging */; };
+		EFF62840AF6A4F909F277847 /* MultiPeerMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 51928B724DFB90094BC6C8CD /* MultiPeerMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9AB6B5E3969357C79280A31B /* FullScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenRoute.swift; sourceTree = "<group>"; };
 		AA58923C40E8415A906421A6 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		AB7D4991FCFD23553AF28130 /* SheetRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRoute.swift; sourceTree = "<group>"; };
+		ACCE2C3E8EAE82368E1FDFF6 /* MultiPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MultiPeerMessaging; path = Packages/MultiPeerMessaging; sourceTree = SOURCE_ROOT; };
 		B0C88C7161B847B0E95399D9 /* SetlistEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistEntryModel.swift; sourceTree = "<group>"; };
 		B176EBEF0E080ED75F8C7696 /* DataLayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerError.swift; sourceTree = "<group>"; };
 		B3FA7350FB445DD756E5353D /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
@@ -66,7 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFF62840AF6A4F909F277847 /* PeerToPeerMessaging in Frameworks */,
+				EFF62840AF6A4F909F277847 /* MultiPeerMessaging in Frameworks */,
+				69C460327F07BB501C6776F3 /* PeerToPeerMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +198,7 @@
 		C530A877BD09133AEFDCC54E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				ACCE2C3E8EAE82368E1FDFF6 /* MultiPeerMessaging */,
 				C941829C95701C1BF81BCD73 /* PeerToPeerMessaging */,
 			);
 			path = Packages;
@@ -217,6 +221,7 @@
 			);
 			name = InSync;
 			packageProductDependencies = (
+				51928B724DFB90094BC6C8CD /* MultiPeerMessaging */,
 				9B629B6D67C271FA6B5F5FF1 /* PeerToPeerMessaging */,
 			);
 			productName = InSync;
@@ -248,6 +253,7 @@
 			mainGroup = 7056B64888A949B4BD19698D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				35C2E928891FEE4FC719D33B /* XCLocalSwiftPackageReference "Packages/MultiPeerMessaging" */,
 				0E3B70A2C9F848F645B00ECB /* XCLocalSwiftPackageReference "Packages/PeerToPeerMessaging" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -531,9 +537,17 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/PeerToPeerMessaging;
 		};
+		35C2E928891FEE4FC719D33B /* XCLocalSwiftPackageReference "Packages/MultiPeerMessaging" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MultiPeerMessaging;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		51928B724DFB90094BC6C8CD /* MultiPeerMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultiPeerMessaging;
+		};
 		9B629B6D67C271FA6B5F5FF1 /* PeerToPeerMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PeerToPeerMessaging;
