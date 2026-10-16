@@ -26,6 +26,7 @@
 		B02315194CDB1B76C3FFF0E2 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08457E15D05D5AB0E1E972A9 /* SessionModel.swift */; };
 		B37DB57FD07FC7FDFBF57A50 /* JSONArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CDA90A2E6046934BADCC19 /* JSONArray.swift */; };
 		C1C15D4A30820BFD00024956 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4930820BFD00024956 /* MarkerModel.swift */; };
+		C1C15D4C30822E6900024956 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4B30822E6900024956 /* SessionRepository.swift */; };
 		C55361BF797288A49B8978C6 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9085F680DE9C4A7F64471 /* MyApp.swift */; };
 		CF79385739D1A6A1ABC1248B /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B0FE13010771029BAE537 /* PersistenceStack.swift */; };
 		D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A090339DB4EE4148EB9B8 /* Repository.swift */; };
@@ -53,6 +54,7 @@
 		B3FA7350FB445DD756E5353D /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		BB2978EEACFB24360F0E7E5B /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
 		C1C15D4930820BFD00024956 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
+		C1C15D4B30822E6900024956 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		C3CDA90A2E6046934BADCC19 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		C941829C95701C1BF81BCD73 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
 		D3CADCC952D3BA52BEC77016 /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				BB2978EEACFB24360F0E7E5B /* GenericRepository.swift */,
 				F75B0FE13010771029BAE537 /* PersistenceStack.swift */,
 				947A090339DB4EE4148EB9B8 /* Repository.swift */,
+				C1C15D4B30822E6900024956 /* SessionRepository.swift */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B02315194CDB1B76C3FFF0E2 /* SessionModel.swift in Sources */,
 				4D300EC41B2C3C83024553B0 /* SetlistEntryModel.swift in Sources */,
 				A5E140A5137E83D5C07407D8 /* SheetRoute.swift in Sources */,
+				C1C15D4C30822E6900024956 /* SessionRepository.swift in Sources */,
 				54EA7EC405B90009644AB18D /* SongModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
