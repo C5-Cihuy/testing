@@ -23,6 +23,7 @@ class DataBase {
                     SongModel.self,
                     SectionModel.self,
                     SetlistEntryModel.self,
+                    MarkerModel.self,
                 ],
                 isMemoryOnly: false
             )

@@ -25,6 +25,7 @@
 		AD871AF041EE5FCDE508BFC6 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB0DE4E72FD28B8CC897A6 /* Either.swift */; };
 		B02315194CDB1B76C3FFF0E2 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08457E15D05D5AB0E1E972A9 /* SessionModel.swift */; };
 		B37DB57FD07FC7FDFBF57A50 /* JSONArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CDA90A2E6046934BADCC19 /* JSONArray.swift */; };
+		C1C15D4A30820BFD00024956 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4930820BFD00024956 /* MarkerModel.swift */; };
 		C55361BF797288A49B8978C6 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9085F680DE9C4A7F64471 /* MyApp.swift */; };
 		CF79385739D1A6A1ABC1248B /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B0FE13010771029BAE537 /* PersistenceStack.swift */; };
 		D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A090339DB4EE4148EB9B8 /* Repository.swift */; };
@@ -51,6 +52,7 @@
 		B176EBEF0E080ED75F8C7696 /* DataLayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerError.swift; sourceTree = "<group>"; };
 		B3FA7350FB445DD756E5353D /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		BB2978EEACFB24360F0E7E5B /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
+		C1C15D4930820BFD00024956 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
 		C3CDA90A2E6046934BADCC19 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		C941829C95701C1BF81BCD73 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
 		D3CADCC952D3BA52BEC77016 /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				08457E15D05D5AB0E1E972A9 /* SessionModel.swift */,
 				B0C88C7161B847B0E95399D9 /* SetlistEntryModel.swift */,
 				EEB5C6F05689D952F7EBAEB7 /* SongModel.swift */,
+				C1C15D4930820BFD00024956 /* MarkerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				6B618AF7A571BE6B70D46726 /* FullScreenRoute.swift in Sources */,
 				6ABA043BD9A65B07C637C423 /* GenericRepository.swift in Sources */,
 				760B6719812047D593E1EC2E /* HomeView.swift in Sources */,
+				C1C15D4A30820BFD00024956 /* MarkerModel.swift in Sources */,
 				B37DB57FD07FC7FDFBF57A50 /* JSONArray.swift in Sources */,
 				AABA380E4EB971355771AB25 /* JSONCodable.swift in Sources */,
 				C55361BF797288A49B8978C6 /* MyApp.swift in Sources */,
