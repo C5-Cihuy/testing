@@ -10,7 +10,6 @@ struct SessionListView: View {
 
     @State private var sessions: [SessionListItem]
     @State private var searchText = ""
-    @State private var destination: SessionListDestination?
 
     // MARK: Initialization
 
@@ -29,7 +28,7 @@ struct SessionListView: View {
                 SessionListHeader(
                     onBack: { dismiss() },
                     onCreate: { router.presentSheet(.createSession) },
-                    onJoin: { destination = .join }
+                    onJoin: { router.presentSheet(.joinSession) }
                 )
 
                 SessionSearchField(text: $searchText)
@@ -47,9 +46,6 @@ struct SessionListView: View {
             .padding(16)
         }
         .toolbar(.hidden, for: .navigationBar)
-        .navigationDestination(item: $destination) { destination in
-            SessionPlaceholderView(destination: destination)
-        }
     }
 
     // MARK: Derived Data
@@ -89,36 +85,6 @@ struct SessionListItem: Identifiable, Hashable {
         self.name = name
         self.songCount = songCount
         self.lastUpdatedText = lastUpdatedText
-    }
-}
-
-// MARK: - Navigation
-
-/// Temporary destinations that keep the create and join menu flows demonstrable.
-private enum SessionListDestination: String, Identifiable {
-    case join
-
-    var id: Self { self }
-
-    var title: LocalizedStringResource {
-        switch self {
-        case .join:
-            "Join Session"
-        }
-    }
-
-    var message: LocalizedStringResource {
-        switch self {
-        case .join:
-            "The join-session flow will be connected here."
-        }
-    }
-
-    var systemImage: String {
-        switch self {
-        case .join:
-            "person.2"
-        }
     }
 }
 
@@ -285,30 +251,6 @@ private struct SessionEmptyState: View {
         }
         .padding()
         .accessibilityElement(children: .combine)
-    }
-}
-
-private struct SessionPlaceholderView: View {
-    let destination: SessionListDestination
-
-    var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: destination.systemImage)
-                .font(.system(size: 52))
-                .foregroundStyle(AppColors.primary)
-
-            Text(destination.title)
-                .font(.largeTitle.bold())
-
-            Text(destination.message)
-                .foregroundStyle(AppColors.mutedForeground)
-                .multilineTextAlignment(.center)
-        }
-        .padding(32)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(AppColors.background)
-        .navigationTitle(destination.title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

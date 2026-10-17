@@ -35,6 +35,9 @@ struct RootRouterView: View {
                 CreateSessionView()
             }
             .presentationSizing(.page)
+        case .joinSession:
+            JoinSessionView(hosts: JoinSessionHost.previewHosts)
+                .presentationSizing(.page)
         }
     }
 
