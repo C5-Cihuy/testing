@@ -30,6 +30,10 @@ struct RootRouterView: View {
         switch route {
         case .placeholder:
             EmptyView()
+        case .createSession:
+            NavigationStack {
+                CreateSessionView()
+            }
         }
     }
 

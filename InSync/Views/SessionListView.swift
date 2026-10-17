@@ -2,10 +2,11 @@ import SwiftUI
 
 // MARK: - Session List
 
-struct SessionList: View {
+struct SessionListView: View {
     // MARK: State
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(AppRouter.self) private var router
 
     @State private var sessions: [SessionListItem]
     @State private var searchText = ""
@@ -27,7 +28,7 @@ struct SessionList: View {
             VStack(spacing: 0) {
                 SessionListHeader(
                     onBack: { dismiss() },
-                    onCreate: { destination = .create },
+                    onCreate: { router.presentSheet(.createSession) },
                     onJoin: { destination = .join }
                 )
 
@@ -95,15 +96,12 @@ struct SessionListItem: Identifiable, Hashable {
 
 /// Temporary destinations that keep the create and join menu flows demonstrable.
 private enum SessionListDestination: String, Identifiable {
-    case create
     case join
 
     var id: Self { self }
 
     var title: LocalizedStringResource {
         switch self {
-        case .create:
-            "Create Session"
         case .join:
             "Join Session"
         }
@@ -111,8 +109,6 @@ private enum SessionListDestination: String, Identifiable {
 
     var message: LocalizedStringResource {
         switch self {
-        case .create:
-            "The create-session flow will be connected here."
         case .join:
             "The join-session flow will be connected here."
         }
@@ -120,8 +116,6 @@ private enum SessionListDestination: String, Identifiable {
 
     var systemImage: String {
         switch self {
-        case .create:
-            "plus.circle"
         case .join:
             "person.2"
         }
@@ -347,12 +341,14 @@ private extension SessionListItem {
 
 #Preview("Empty state") {
     NavigationStack {
-        SessionList()
+        SessionListView()
+            .environment(AppRouter())
     }
 }
 
 #Preview("Filled state") {
     NavigationStack {
-        SessionList(sessions: SessionListItem.previewSessions)
+        SessionListView(sessions: SessionListItem.previewSessions)
+            .environment(AppRouter())
     }
 }

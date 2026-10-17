@@ -27,7 +27,8 @@
 		B37DB57FD07FC7FDFBF57A50 /* JSONArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CDA90A2E6046934BADCC19 /* JSONArray.swift */; };
 		C1C15D4A30820BFD00024956 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4930820BFD00024956 /* MarkerModel.swift */; };
 		C1C15D4C30822E6900024956 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4B30822E6900024956 /* SessionRepository.swift */; };
-		C1C15D4E3082367C00024956 /* SessionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4D3082367C00024956 /* SessionList.swift */; };
+		C1C15D4E3082367C00024956 /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4D3082367C00024956 /* SessionListView.swift */; };
+		C1C15D5030836CA400024956 /* CreateSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4F30836CA400024956 /* CreateSessionView.swift */; };
 		C55361BF797288A49B8978C6 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9085F680DE9C4A7F64471 /* MyApp.swift */; };
 		CF79385739D1A6A1ABC1248B /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B0FE13010771029BAE537 /* PersistenceStack.swift */; };
 		D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A090339DB4EE4148EB9B8 /* Repository.swift */; };
@@ -56,7 +57,8 @@
 		BB2978EEACFB24360F0E7E5B /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
 		C1C15D4930820BFD00024956 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
 		C1C15D4B30822E6900024956 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
-		C1C15D4D3082367C00024956 /* SessionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionList.swift; sourceTree = "<group>"; };
+		C1C15D4D3082367C00024956 /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
+		C1C15D4F30836CA400024956 /* CreateSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionView.swift; sourceTree = "<group>"; };
 		C3CDA90A2E6046934BADCC19 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		C941829C95701C1BF81BCD73 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
 		D3CADCC952D3BA52BEC77016 /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
@@ -125,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				0EF28172E2286268281CD8D5 /* HomeView.swift */,
-				C1C15D4D3082367C00024956 /* SessionList.swift */,
+				C1C15D4D3082367C00024956 /* SessionListView.swift */,
+				C1C15D4F30836CA400024956 /* CreateSessionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,7 +304,7 @@
 				AABA380E4EB971355771AB25 /* JSONCodable.swift in Sources */,
 				C55361BF797288A49B8978C6 /* MyApp.swift in Sources */,
 				CF79385739D1A6A1ABC1248B /* PersistenceStack.swift in Sources */,
-				C1C15D4E3082367C00024956 /* SessionList.swift in Sources */,
+				C1C15D4E3082367C00024956 /* SessionListView.swift in Sources */,
 				D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */,
 				583138D11BF5C6449C0F1641 /* RootRouterView.swift in Sources */,
 				ECD267851EC7066951659741 /* SectionModel.swift in Sources */,
@@ -310,6 +313,7 @@
 				A5E140A5137E83D5C07407D8 /* SheetRoute.swift in Sources */,
 				C1C15D4C30822E6900024956 /* SessionRepository.swift in Sources */,
 				54EA7EC405B90009644AB18D /* SongModel.swift in Sources */,
+				C1C15D5030836CA400024956 /* CreateSessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
