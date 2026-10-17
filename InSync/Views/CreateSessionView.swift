@@ -10,6 +10,7 @@ struct CreateSessionView: View {
     @State private var sessionName: String
     @State private var songs: [CreateSessionSongItem]
     @State private var isSongPickerPresented = false
+    @State private var isMIDISetupPresented = false
 
     // MARK: Initialization
 
@@ -43,7 +44,7 @@ struct CreateSessionView: View {
 
                 CreateSessionFooter(
                     isStartEnabled: canStartSharing,
-                    onMIDISetup: {},
+                    onMIDISetup: { isMIDISetupPresented = true },
                     onStartSharing: {}
                 )
             }
@@ -63,6 +64,10 @@ struct CreateSessionView: View {
                 )
             }
             .presentationSizing(.page)
+        }
+        .sheet(isPresented: $isMIDISetupPresented) {
+            MIDISetupView()
+                .presentationSizing(.page)
         }
     }
 

@@ -30,6 +30,7 @@
 		C1C15D4E3082367C00024956 /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4D3082367C00024956 /* SessionListView.swift */; };
 		C1C15D5030836CA400024956 /* CreateSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D4F30836CA400024956 /* CreateSessionView.swift */; };
 		C1C15D523083716C00024956 /* SongPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D513083716C00024956 /* SongPickerView.swift */; };
+		C1C15D5630837C6800024956 /* MIDISetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C15D5530837C6800024956 /* MIDISetupView.swift */; };
 		C55361BF797288A49B8978C6 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9085F680DE9C4A7F64471 /* MyApp.swift */; };
 		CF79385739D1A6A1ABC1248B /* PersistenceStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75B0FE13010771029BAE537 /* PersistenceStack.swift */; };
 		D30B0A072E5CC7C3774DA35B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A090339DB4EE4148EB9B8 /* Repository.swift */; };
@@ -61,6 +62,7 @@
 		C1C15D4D3082367C00024956 /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
 		C1C15D4F30836CA400024956 /* CreateSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionView.swift; sourceTree = "<group>"; };
 		C1C15D513083716C00024956 /* SongPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongPickerView.swift; sourceTree = "<group>"; };
+		C1C15D5530837C6800024956 /* MIDISetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISetupView.swift; sourceTree = "<group>"; };
 		C3CDA90A2E6046934BADCC19 /* JSONArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArray.swift; sourceTree = "<group>"; };
 		C941829C95701C1BF81BCD73 /* PeerToPeerMessaging */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PeerToPeerMessaging; path = Packages/PeerToPeerMessaging; sourceTree = SOURCE_ROOT; };
 		D3CADCC952D3BA52BEC77016 /* RootRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				C1C15D4D3082367C00024956 /* SessionListView.swift */,
 				C1C15D4F30836CA400024956 /* CreateSessionView.swift */,
 				C1C15D513083716C00024956 /* SongPickerView.swift */,
+				C1C15D5530837C6800024956 /* MIDISetupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7272B73D2FF17F71A25E9A8 /* ActiveRecord.swift in Sources */,
+				C1C15D5630837C6800024956 /* MIDISetupView.swift in Sources */,
 				1A57EB2FD8A8500335B1F32E /* AppAlert.swift in Sources */,
 				9A2781304616773D8379B2C6 /* AppColors.swift in Sources */,
 				9D8495639FD5FE1D6E5ABB14 /* AppRoute.swift in Sources */,
