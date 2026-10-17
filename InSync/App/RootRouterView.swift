@@ -34,6 +34,7 @@ struct RootRouterView: View {
             NavigationStack {
                 CreateSessionView()
             }
+            .presentationSizing(.page)
         }
     }
 

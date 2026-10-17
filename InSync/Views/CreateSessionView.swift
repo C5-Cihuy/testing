@@ -9,6 +9,7 @@ struct CreateSessionView: View {
 
     @State private var sessionName: String
     @State private var songs: [CreateSessionSongItem]
+    @State private var isSongPickerPresented = false
 
     // MARK: Initialization
 
@@ -31,7 +32,7 @@ struct CreateSessionView: View {
                 CreateSessionHeader(
                     sessionName: $sessionName,
                     onClose: { dismiss() },
-                    onAddSong: addMockSong
+                    onAddSong: { isSongPickerPresented = true }
                 )
 
                 CreateSessionContent(
@@ -53,6 +54,16 @@ struct CreateSessionView: View {
             .padding(16)
         }
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $isSongPickerPresented) {
+            NavigationStack {
+                SongPickerView(
+                    songs: SongPickerItem.previewSongs,
+                    selectedSongIDs: Set(songs.map(\.id)),
+                    onDone: addSelectedSongs
+                )
+            }
+            .presentationSizing(.page)
+        }
     }
 
     // MARK: Derived Data
@@ -64,9 +75,12 @@ struct CreateSessionView: View {
 
     // MARK: Actions
 
-    private func addMockSong() {
-        // A song picker will replace this local sample insertion.
-        songs.append(.sample)
+    private func addSelectedSongs(_ selectedSongs: [SongPickerItem]) {
+        let existingIDs = Set(songs.map(\.id))
+
+        for song in selectedSongs where !existingIDs.contains(song.id) {
+            songs.append(CreateSessionSongItem(song))
+        }
     }
 
     private func deleteSong(_ song: CreateSessionSongItem) {
@@ -103,6 +117,15 @@ struct CreateSessionSongItem: Identifiable, Hashable {
         self.key = key
         self.beatsPerMinute = beatsPerMinute
         self.timeSignature = timeSignature
+    }
+
+    init(_ song: SongPickerItem) {
+        id = song.id
+        title = song.title
+        artist = song.artist
+        key = song.key
+        beatsPerMinute = song.beatsPerMinute
+        timeSignature = song.timeSignature
     }
 }
 
