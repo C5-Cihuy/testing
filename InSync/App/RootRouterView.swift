@@ -30,6 +30,14 @@ struct RootRouterView: View {
         switch route {
         case .placeholder:
             EmptyView()
+        case .createSession:
+            NavigationStack {
+                CreateSessionView()
+            }
+            .presentationSizing(.page)
+        case .joinSession:
+            JoinSessionView(hosts: JoinSessionHost.previewHosts)
+                .presentationSizing(.page)
         }
     }
 
